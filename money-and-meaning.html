@@ -15,6 +15,7 @@
       color: #ffffff;
       text-align: left;
     }
+
     .top-bar {
       display: flex;
       justify-content: flex-end;
@@ -24,33 +25,37 @@
       border-bottom: 1px solid #444;
       font-size: 0.9rem;
     }
+
     .top-bar a {
       color: #ffffff;
       text-decoration: none;
       margin-left: 1.5rem;
     }
+
     .top-bar a.donate {
       color: #ff2400;
       font-weight: bold;
     }
-    header {
+
+    .logo-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       background-color: #1a1a1a;
-      text-align: left;
-      padding: 2rem 2rem 1rem 2rem;
+      padding: 0 2rem;
     }
-    header h1 {
+
+    .logo-link h1 {
       font-size: 3rem;
       letter-spacing: 2px;
       margin: 0;
-      transition: color 0.3s ease;
+      color: white;
     }
-    header h1:hover {
+
+    .logo-link h1:hover {
       color: #ff2400;
     }
-    .logo-link {
-      text-decoration: none;
-      color: inherit;
-    }
+
     nav {
       display: flex;
       flex-wrap: wrap;
@@ -61,75 +66,96 @@
       border-top: 1px solid #444;
       border-bottom: 1px solid #444;
     }
+
     .nav-column {
       display: flex;
       flex-direction: column;
       gap: 0.5rem;
     }
+
     nav a {
       color: #ff2400;
       text-decoration: none;
       font-weight: bold;
     }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    .blog-content {
+
+    .page-wrapper {
       padding: 2rem;
       max-width: 800px;
       margin-left: 2rem;
     }
-    .blog-content h2 {
+
+    h2 {
       font-size: 2.5rem;
-      margin-bottom: 1rem;
-    }
-    .blog-content ul {
-      list-style: disc;
-      padding-left: 1.5rem;
-    }
-    .blog-content li {
       margin-bottom: 1.5rem;
     }
-    .blog-content a {
+
+    .timestamp {
+      font-size: 0.9rem;
+      color: #aaa;
+      margin: 0.3rem 0 2rem 1rem;
+    }
+
+    footer {
+      margin-top: 4rem;
+      font-size: 0.9rem;
+      color: #777;
+      padding: 2rem;
+    }
+
+    .contact-section {
+      padding: 4rem 2rem;
+      max-width: 600px;
+      margin-left: 2rem;
+    }
+
+    .contact-section h2 {
+      color: #ff2400;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .contact-section a {
       color: #ff2400;
       text-decoration: none;
       font-weight: bold;
     }
-    .blog-content a:hover {
-      text-decoration: underline;
-    }
-    .timestamp {
-      font-size: 0.9rem;
-      color: #aaa;
-      margin-top: -1rem;
-    }
-    footer {
-      text-align: left;
-      padding: 2rem;
-      font-size: 0.9rem;
-      color: #777;
-    }
   </style>
 </head>
 <body>
+  <!-- Top Bar -->
   <div class="top-bar">
     <a href="#search">Search</a>
     <a href="#donate" class="donate">Support</a>
   </div>
 
-  <div style="display: flex; justify-content: flex-end; background-color: #1a1a1a; padding: 0 2rem;">
-    <a href="index.html"><img src="jdc_logo.svg" alt="Juracka Design Co. Logo" style="height: 200px;"></a>
+  <!-- Logo Bar -->
+  <div class="logo-bar">
+    <a href="index.html" class="logo-link"><h1>Juracka Design Co.</h1></a>
+    <img src="jdc_logo.svg" alt="Logo" style="height: 200px;">
   </div>
 
-  <header>
-    <a href="index.html" class="logo-link"><h1>Juracka Design Co.</h1></a>
-  </header>
-
-  <!-- Dynamic nav -->
-  <div id="nav-placeholder"></div>
+  <!-- Nav -->
+  <nav>
+    <div class="nav-column">
+      <a href="#">City Stuff</a>
+      <a href="#">At Home With Me</a>
+      <a href="#">Good Junk</a>
+    </div>
+    <div class="nav-column">
+      <a href="#">Threads + Fits</a>
+      <a href="#">Consumed & Loved</a>
+      <a href="#">Wild River Biz</a>
+    </div>
+    <div class="nav-column">
+      <a href="money-and-meaning.html">Money + Meaning</a>
+      <a href="#">Brain Dump</a>
+      <a href="#contact">Holler At Me</a>
+    </div>
+  </nav>
 
   <!-- Blog Content -->
-  <div class="blog-content">
+  <div class="page-wrapper">
     <h2>Money + Meaning</h2>
     <ul>
       <li>
@@ -139,23 +165,15 @@
     </ul>
   </div>
 
-  <!-- Contact, CTA, Footer -->
-  <div id="contact-placeholder"></div>
-  <div id="cta-placeholder"></div>
-  <div id="footer-placeholder"></div>
+  <!-- Contact -->
+  <div class="contact-section" id="contact">
+    <h2>Holler At Me</h2>
+    <p>Got a question, a project idea, or just want to say hey? Reach out to me directly at <a href="mailto:jurackadesignco@gmail.com">jurackadesignco@gmail.com</a></p>
+  </div>
 
-  <!-- JS to load components -->
-  <script>
-    async function loadComponent(id, file) {
-      const res = await fetch(file);
-      const html = await res.text();
-      document.getElementById(id).innerHTML = html;
-    }
-
-    loadComponent('nav-placeholder', 'components/nav.html');
-    loadComponent('contact-placeholder', 'components/contact.html');
-    loadComponent('cta-placeholder', 'components/cta.html');
-    loadComponent('footer-placeholder', 'components/footer.html');
-  </script>
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Juracka Design Co. | <a href="index.html" style="color:#ff2400;">Back to Homepage</a>
+  </footer>
 </body>
 </html>
