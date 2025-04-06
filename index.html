@@ -15,26 +15,28 @@
       color: #ffffff;
       text-align: left;
     }
-    .top-bar {
-      display: none;
-    }
+
     header {
       background-color: #1a1a1a;
       text-align: left;
       padding: 2rem 2rem 1rem 2rem;
     }
+
     header h1 {
       font-size: 3rem;
       letter-spacing: 2px;
       margin: 0;
     }
+
     header h1 a {
       text-decoration: none;
       color: #ffffff;
     }
+
     header h1 a:hover {
       color: #ff2400;
     }
+
     nav {
       display: flex;
       flex-wrap: wrap;
@@ -45,55 +47,65 @@
       border-top: 1px solid #444;
       border-bottom: 1px solid #444;
     }
+
     .nav-column {
       display: flex;
       flex-direction: column;
       gap: 0.5rem;
     }
+
     nav a {
       color: #ff2400;
       text-decoration: none;
       font-weight: bold;
     }
+
     nav a:hover {
       text-decoration: underline;
     }
-    .affiliate-section {
-      padding: 4rem 2rem;
-      max-width: 800px;
-      margin: 0 auto;
-      text-align: left;
-    }
-    .affiliate-section h2 {
-      color: #ffffff;
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-    .affiliate-section a {
-      color: #ff2400;
-      font-weight: bold;
-      font-size: 1.2rem;
-      text-decoration: none;
-    }
-    .affiliate-section a:hover {
-      text-decoration: underline;
-    }
+
     footer {
       text-align: left;
       padding: 2rem 2rem;
       font-size: 0.9rem;
       color: #777;
     }
-    footer a {
-      color: #ff2400;
-      text-decoration: none;
+
+    .cta, .contact-section {
+      display: none;
+    }
+
+    .logo-container {
+      display: flex;
+      justify-content: flex-end;
+      background-color: #1a1a1a;
+      padding: 0 2rem;
+    }
+
+    .logo-container img {
+      height: 200px;
+    }
+
+    .substack-wrapper {
+      padding: 2rem;
+    }
+
+    .substack-wrapper iframe {
+      width: 100%;
+      max-width: 800px;
+      height: 320px;
+      border: 1px solid #EEE;
+      background: white;
+      display: block;
     }
   </style>
 </head>
 <body>
 
-  <div style="display: flex; justify-content: flex-end; background-color: #1a1a1a; padding: 0 2rem;">
-    <a href="#"><img src="jdc_logo.svg" alt="Juracka Design Co. Logo" style="height: 200px;"></a>
+  <div class="logo-container">
+    <a href="index.html">
+      <img src="jdc_logo.svg" alt="Juracka Design Co. Logo">
+    </a>
   </div>
 
   <header>
@@ -102,20 +114,20 @@
 
   <nav>
     <div class="nav-column">
-      <a href="https://wildmile.org/" target="_blank">Support Wild Mile</a>
+      <a href="mailto:jurackadesignco@gmail.com">Holler At Me</a>
     </div>
     <div class="nav-column">
       <a href="https://jurackadesignco.substack.com" target="_blank">Brain Dump</a>
     </div>
     <div class="nav-column">
-      <a href="mailto:jurackadesignco@gmail.com">Holler At Me</a>
+      <a href="https://wildmile.org" target="_blank">Support Wild Mile</a>
     </div>
   </nav>
 
-  <section class="affiliate-section">
-    <h2>Follow Along on Instagram</h2>
-    <a href="https://instagram.com/juracka_design_co" target="_blank">@juracka_design_co</a>
-  </section>
+  <!-- Substack Feed Embed -->
+  <div class="substack-wrapper">
+    <iframe src="https://jurackadesignco.substack.com/embed" frameborder="0" scrolling="no"></iframe>
+  </div>
 
   <footer>
     &copy; 2025 Juracka Design Co.
