@@ -4,107 +4,96 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Money + Meaning – Juracka Design Co.</title>
-  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
   <link href="https://fonts.googleapis.com/css2?family=Futura&display=swap" rel="stylesheet">
-  <meta name="description" content="Money + Meaning: A fresh take on finance from a dude who actually gets it.">
-  <meta property="og:title" content="Money + Meaning – Juracka Design Co.">
-  <meta property="og:description" content="A fresh take on finance from a dude who actually gets it.">
-  <meta property="og:image" content="/jdc_logo.svg">
-  <meta name="theme-color" content="#1a1a1a">
   <style>
     body {
       margin: 0;
-      padding: 0;
+      padding: 2rem;
       font-family: 'Futura', sans-serif;
       background-color: #1a1a1a;
       color: #ffffff;
-      text-align: left;
+      line-height: 1.6;
     }
-    .top-bar {
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-      background-color: #1a1a1a;
-      padding: 0.5rem 2rem;
-      border-bottom: 1px solid #444;
-      font-size: 0.9rem;
-    }
-    .top-bar a {
-      color: #ffffff;
-      text-decoration: none;
-      margin-left: 1.5rem;
-    }
-    .top-bar a.donate {
+    h1, h2, h3 {
       color: #ff2400;
       font-weight: bold;
     }
-    header {
-      background-color: #1a1a1a;
-      text-align: left;
-      padding: 2rem 2rem 1rem 2rem;
+    a {
+      color: #ff2400;
+      text-decoration: none;
     }
-    header h1 {
-      font-size: 3rem;
-      letter-spacing: 2px;
-      margin: 0;
-    }
-    .post-content {
-      padding: 2rem;
+    .container {
       max-width: 800px;
       margin: 0 auto;
-      font-size: 1.1rem;
-      line-height: 1.7;
+    }
+    .timestamp {
+      font-size: 0.9rem;
+      color: #999;
+      margin-bottom: 2rem;
     }
     footer {
-      text-align: left;
-      padding: 2rem 2rem;
+      margin-top: 4rem;
       font-size: 0.9rem;
       color: #777;
+      text-align: left;
     }
   </style>
 </head>
 <body>
-  <div class="top-bar">
-    <a href="#search">Search</a>
-    <a href="#donate" class="donate">Support</a>
+
+  <!-- Top bar -->
+  <div class="top-bar" style="display: flex; justify-content: flex-end; padding: 0.5rem 2rem; border-bottom: 1px solid #444;">
+    <a href="#search" style="color: #ffffff; text-decoration: none; margin-left: 1.5rem;">Search</a>
+    <a href="#donate" style="color: #ff2400; font-weight: bold; text-decoration: none; margin-left: 1.5rem;">Support</a>
   </div>
 
+  <!-- Logo -->
   <div style="display: flex; justify-content: flex-end; background-color: #1a1a1a; padding: 0 2rem;">
-    <a href="/"><img src="jdc_logo.svg" alt="Juracka Design Co. Logo" style="height: 200px;"></a>
+    <a href="index.html"><img src="jdc_logo.svg" alt="Juracka Design Co. Logo" style="height: 200px;"></a>
   </div>
 
-  <header>
+  <!-- Header + Blog Preview -->
+  <header class="container">
     <h1>Money + Meaning</h1>
+    <div class="timestamp">Last updated April 5, 2025</div>
+
+    <div style="margin-top: 2rem;">
+      <h2>Latest Post</h2>
+      <h3 style="margin: 0;">
+        <a href="what-tariffs-mean.html">What Tariffs Mean for Regular People</a>
+      </h3>
+      <p style="color:#ccc; font-size: 0.95rem;">
+        A quick and calm breakdown of how new tariffs hit your wallet — and what you can actually do about it.
+      </p>
+      <a href="what-tariffs-mean.html" style="font-weight: bold;">→ Read the full post</a>
+    </div>
   </header>
 
-  <!-- Dynamic nav -->
+  <!-- Dynamic components -->
   <div id="nav-placeholder"></div>
-
-  <!-- Page content -->
-  <div class="post-content">
-    <p>Here’s where I break down what’s actually going on with tariffs, inflation, and everything the talking heads are making noise about — but in a way you can actually use.</p>
-
-    <p>Expect straight talk. Some sarcasm. No panic. This isn’t CNBC — it’s Common Sense Finance for people who hate finance bros.</p>
-
-    <p>[Insert your full blog post here]</p>
-  </div>
-
-  <!-- Contact, CTA, Footer -->
   <div id="contact-placeholder"></div>
   <div id="cta-placeholder"></div>
   <div id="footer-placeholder"></div>
 
+  <!-- JS loader -->
   <script>
     async function loadComponent(id, file) {
-      const res = await fetch(file);
-      const html = await res.text();
-      document.getElementById(id).innerHTML = html;
+      try {
+        const res = await fetch(file);
+        if (!res.ok) throw new Error(`Failed to load ${file}`);
+        const html = await res.text();
+        document.getElementById(id).innerHTML = html;
+      } catch (err) {
+        console.error(`Error loading component ${file}:`, err);
+      }
     }
 
-    loadComponent('nav-placeholder', '/components/nav.html');
-    loadComponent('contact-placeholder', '/components/contact.html');
-    loadComponent('cta-placeholder', '/components/cta.html');
-    loadComponent('footer-placeholder', '/components/footer.html');
+    loadComponent('nav-placeholder', 'components/nav.html');
+    loadComponent('contact-placeholder', 'components/contact.html');
+    loadComponent('cta-placeholder', 'components/cta.html');
+    loadComponent('footer-placeholder', 'components/footer.html');
   </script>
+
 </body>
 </html>
