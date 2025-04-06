@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>What Tariffs Mean | Juracka Design Co.</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
   <link href="https://fonts.googleapis.com/css2?family=Futura&display=swap" rel="stylesheet">
   <style>
     body {
@@ -26,25 +27,44 @@
       max-width: 800px;
       margin: 0 auto;
     }
-    footer {
-      margin-top: 4rem;
-      font-size: 0.9rem;
-      color: #777;
-      text-align: left;
-    }
     .hero-img {
       width: 100%;
       max-width: 800px;
       display: block;
       margin-bottom: 2rem;
     }
+    footer {
+      margin-top: 4rem;
+      font-size: 0.9rem;
+      color: #777;
+      text-align: left;
+    }
   </style>
 </head>
 <body>
+
+  <!-- Top bar -->
+  <div class="top-bar" style="display: flex; justify-content: flex-end; padding: 0.5rem 2rem; border-bottom: 1px solid #444;">
+    <a href="#search" style="color: #ffffff; text-decoration: none; margin-left: 1.5rem;">Search</a>
+    <a href="#donate" style="color: #ff2400; font-weight: bold; text-decoration: none; margin-left: 1.5rem;">Support</a>
+  </div>
+
+  <!-- Logo -->
+  <div style="display: flex; justify-content: flex-end; background-color: #1a1a1a; padding: 0 2rem;">
+    <a href="index.html"><img src="jdc_logo.svg" alt="Juracka Design Co. Logo" style="height: 200px;"></a>
+  </div>
+
+  <!-- Header -->
+  <header style="padding: 2rem 2rem 1rem 2rem;">
+    <h1 style="font-size: 2.5rem; letter-spacing: 2px; margin: 0;">What Tariffs Mean</h1>
+  </header>
+
+  <!-- Dynamic nav -->
+  <div id="nav-placeholder"></div>
+
+  <!-- Main content -->
   <div class="container">
     <img src="tariffs_ouch.jpeg" alt="Tariff forecast chart" class="hero-img">
-
-    <h1>What Tariffs Mean for Regular People (and What You Can Do About It)</h1>
 
     <p>There’s been a lot of buzz lately about new tariffs, which are taxes on stuff we import from other countries. You’re going to hear folks say things like “Don’t worry, China pays for that” or “This is about protecting American jobs.”</p>
 
@@ -55,9 +75,9 @@
     <p>This isn’t about panic. This is about being honest, being ready, and taking care of each other like we always have.</p>
 
     <h2>So… What Are Tariffs?</h2>
-    <p>Tariffs are taxes on imported goods, from groceries and tools to clothes and electronics. The idea with tariffs is to make foreign goods more expensive so people “buy American.” But here’s the kicker: even American businesses rely heavily on imported parts and (raw) materials. So when those prices rise, the costs are often passed on to you.</p>
+    <p>Tariffs are taxes on imported goods, from groceries and tools to clothes and electronics. The idea with tariffs is to make foreign goods more expensive so people “buy American.” But here’s the kicker: even American businesses rely heavily on imported parts and materials. So when those prices rise, the costs are often passed on to you.</p>
 
-    <p>And we all know how this goes: your rent goes up, your groceries go up, your utilities go up. For most working people, which if you’re reading this I’m assuming that’s you, your paycheck likely stays the same. Your boss isn’t about to hand you a 6% raise just because inflation hits 6%.</p>
+    <p>And we all know how this goes: your rent goes up, your groceries go up, your utilities go up. For most working people — which if you’re reading this I’m assuming that’s you — your paycheck likely stays the same. Your boss isn’t about to hand you a 6% raise just because inflation hits 6%.</p>
 
     <h2>A Quick and Dirty History of Tariffs</h2>
     <p>Ben Carlson gives a more detailed breakdown <a href="https://awealthofcommonsense.com/2025/04/a-short-history-of-tariffs/">here</a>, but TLDR:</p>
@@ -97,17 +117,25 @@
     <p>We’ve made it through harder times. We’ve adapted before, and we can do it again. Let’s look out for each other, buy smart, live creatively, and stay honest about what’s coming.</p>
     <p>This isn’t about fear, it’s about community, preparation, and resilience.</p>
     <p>We’ve got this. And if you need help, ideas, or just want to vent about the price of eggs, drop it in the comments pls and thanks.</p>
-
-    <div style="margin-top: 40px; padding: 20px; background: #f9f9f9; border-top: 2px solid #ccc; text-align: center;">
-  <p style="font-size: 18px; font-weight: bold; margin-bottom: 15px;">
-    If you’re tired of scrolling aimlessly, subscribe to our newsletter for the real deal – because mediocre just isn’t in our vocabulary.
-  </p>
-  <iframe src="https://jurackadesignco.substack.com/embed" width="480" height="320" style="border:1px solid #EEE; background:white;" frameborder="0" scrolling="no"></iframe>
-</div>
-    
-    <footer>
-      &copy; 2025 Juracka Design Co. | <a href="index.html" style="color:#ff2400;">Back to Homepage</a>
-    </footer>
   </div>
+
+  <!-- Contact, CTA, Footer -->
+  <div id="contact-placeholder"></div>
+  <div id="cta-placeholder"></div>
+  <div id="footer-placeholder"></div>
+
+  <!-- JS to load components -->
+  <script>
+    async function loadComponent(id, file) {
+      const res = await fetch(file);
+      const html = await res.text();
+      document.getElementById(id).innerHTML = html;
+    }
+
+    loadComponent('nav-placeholder', 'components/nav.html');
+    loadComponent('contact-placeholder', 'components/contact.html');
+    loadComponent('cta-placeholder', 'components/cta.html');
+    loadComponent('footer-placeholder', 'components/footer.html');
+  </script>
 </body>
 </html>
