@@ -15,36 +15,26 @@
       color: #ffffff;
       text-align: left;
     }
-
-    a {
-      text-decoration: none;
-      color: #ffffff;
+    .top-bar {
+      display: none;
     }
-
-    a:hover {
-      color: #ff2400;
-    }
-
-    header a {
-      color: #ffffff;
-      text-decoration: none;
-    }
-
-    header a:hover {
-      color: #ff2400;
-    }
-
     header {
       background-color: #1a1a1a;
+      text-align: left;
       padding: 2rem 2rem 1rem 2rem;
     }
-
     header h1 {
       font-size: 3rem;
       letter-spacing: 2px;
       margin: 0;
     }
-
+    header h1 a {
+      color: #ffffff;
+      text-decoration: none;
+    }
+    header h1 a:hover {
+      color: #ff2400;
+    }
     nav {
       display: flex;
       flex-wrap: wrap;
@@ -55,62 +45,69 @@
       border-top: 1px solid #444;
       border-bottom: 1px solid #444;
     }
-
     .nav-column {
       display: flex;
       flex-direction: column;
       gap: 0.5rem;
     }
-
     nav a {
       color: #ff2400;
+      text-decoration: none;
       font-weight: bold;
     }
-
     nav a:hover {
       text-decoration: underline;
     }
-
     footer {
       text-align: left;
       padding: 2rem 2rem;
       font-size: 0.9rem;
       color: #777;
     }
-
-    .logo-bar {
-      display: flex;
-      justify-content: flex-end;
-      background-color: #1a1a1a;
-      padding: 0 2rem;
-    }
-
-    .logo-bar img {
-      height: 200px;
-    }
   </style>
 </head>
 <body>
-  <div class="logo-bar">
-    <a href="#"><img src="jdc_logo.svg" alt="Juracka Design Co. Logo"></a>
+
+  <!-- Logo and Header -->
+  <div style="display: flex; justify-content: flex-end; background-color: #1a1a1a; padding: 0 2rem;">
+    <a href="index.html"><img src="jdc_logo.svg" alt="Juracka Design Co. Logo" style="height: 200px;"></a>
   </div>
 
   <header>
-    <a href="index.html"><h1>Juracka Design Co.</h1></a>
+    <h1><a href="index.html">Juracka Design Co.</a></h1>
   </header>
 
+  <!-- Navigation Menu -->
   <nav>
+    <div class="nav-column">
+      <a href="https://jurackadesignco.substack.com/" target="_blank">Brain Dump</a>
+    </div>
+    <div class="nav-column">
+      <a href="mailto:jurackadesignco@gmail.com">Holler At Me</a>
+    </div>
     <div class="nav-column">
       <a href="https://wildmile.org/" target="_blank">Support Wild Mile</a>
     </div>
-    <div class="nav-column">
-      <a href="https://jurackadesignco.substack.com" target="_blank">Brain Dump</a>
-      <a href="mailto:jurackadesignco@gmail.com">Holler At Me</a>
-    </div>
   </nav>
 
+  <!-- Instagram Feed Section -->
+  <section style="padding: 4rem 2rem; background-color: #1a1a1a; text-align: center;">
+    <h2 style="color: #ffffff; font-size: 2rem; margin-bottom: 2rem;">Our Instagram Feed</h2>
+
+    <blockquote 
+      class="instagram-media" 
+      data-instgrm-permalink="https://www.instagram.com/juracka_design_co/" 
+      data-instgrm-version="14" 
+      style="background:#1a1a1a; border:none; margin: 0 auto; max-width:540px; width:100%;">
+    </blockquote>
+
+    <script async src="//www.instagram.com/embed.js"></script>
+  </section>
+
+  <!-- Footer -->
   <footer>
     &copy; 2025 Juracka Design Co.
   </footer>
+
 </body>
 </html>
