@@ -6,6 +6,11 @@
   <title>Money + Meaning | Juracka Design Co.</title>
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <link href="https://fonts.googleapis.com/css2?family=Futura&display=swap" rel="stylesheet">
+  <meta name="description" content="Money + Meaning: A fresh take on finance from a dude who actually gets it.">
+  <meta property="og:title" content="Money + Meaning – Juracka Design Co.">
+  <meta property="og:description" content="A fresh take on finance from a dude who actually gets it.">
+  <meta property="og:image" content="/jdc_logo.svg">
+  <meta name="theme-color" content="#1a1a1a">
   <style>
     body {
       margin: 0;
@@ -39,26 +44,6 @@
       color: #aaa;
       margin-top: 0.2rem;
     }
-    nav {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: flex-start;
-      gap: 2rem;
-      padding: 1rem 2rem;
-      background-color: #1a1a1a;
-      border-top: 1px solid #444;
-      border-bottom: 1px solid #444;
-    }
-    .nav-column {
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-    }
-    nav a {
-      color: #ff2400;
-      text-decoration: none;
-      font-weight: bold;
-    }
     footer {
       margin-top: 4rem;
       font-size: 0.9rem;
@@ -69,27 +54,29 @@
 </head>
 <body>
 
-  <!-- Dynamic Header -->
+  <!-- Dynamic header -->
   <div id="header-placeholder"></div>
 
-  <!-- Nav -->
+  <!-- Dynamic nav -->
   <div id="nav-placeholder"></div>
 
-  <!-- Page title + post list -->
-  <h1>Money + Meaning</h1>
-  <ul>
-    <li>
-      <a href="what-tariffs-mean.html">What Tariffs Mean for Regular People (and What You Can Do About It)</a>
-      <div class="timestamp">4/5/2025, 9:10pm, Beverly, Chicago</div>
-    </li>
-  </ul>
+  <!-- Page-specific content -->
+  <main>
+    <h1>Money + Meaning</h1>
+    <ul>
+      <li>
+        <a href="what-tariffs-mean.html">What Tariffs Mean for Regular People (and What You Can Do About It)</a>
+        <div class="timestamp">4/5/2025, 9:10pm, Beverly, Chicago</div>
+      </li>
+    </ul>
+  </main>
 
-  <!-- Dynamic Sections -->
+  <!-- Contact, CTA, Footer -->
   <div id="contact-placeholder"></div>
   <div id="cta-placeholder"></div>
   <div id="footer-placeholder"></div>
 
-  <!-- JS to load components -->
+  <!-- Component loader -->
   <script>
     async function loadComponent(id, file) {
       const res = await fetch(file);
