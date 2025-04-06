@@ -16,24 +16,33 @@
       text-align: left;
     }
 
-    .logo-bar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background-color: #1a1a1a;
-      padding: 0 2rem;
+    a {
+      text-decoration: none;
+      color: #ffffff;
     }
 
-    .logo-link h1 {
-      font-size: 3rem;
-      letter-spacing: 2px;
-      margin: 0;
-      color: white;
+    a:hover {
+      color: #ff2400;
+    }
+
+    header a {
+      color: #ffffff;
       text-decoration: none;
     }
 
-    .logo-link h1:hover {
+    header a:hover {
       color: #ff2400;
+    }
+
+    header {
+      background-color: #1a1a1a;
+      padding: 2rem 2rem 1rem 2rem;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      letter-spacing: 2px;
+      margin: 0;
     }
 
     nav {
@@ -53,19 +62,13 @@
       gap: 0.5rem;
     }
 
-    a {
+    nav a {
       color: #ff2400;
-      text-decoration: none;
       font-weight: bold;
     }
 
-    a:hover {
+    nav a:hover {
       text-decoration: underline;
-    }
-
-    a:visited {
-      color: #ff2400;
-      text-decoration: none;
     }
 
     footer {
@@ -75,48 +78,39 @@
       color: #777;
     }
 
-    footer a {
-      color: #ff2400;
-      text-decoration: none;
-      font-weight: bold;
+    .logo-bar {
+      display: flex;
+      justify-content: flex-end;
+      background-color: #1a1a1a;
+      padding: 0 2rem;
     }
 
-    footer a:hover {
-      text-decoration: underline;
+    .logo-bar img {
+      height: 200px;
     }
   </style>
 </head>
 <body>
-
-  <!-- Logo + Title -->
   <div class="logo-bar">
-    <a href="index.html" class="logo-link"><h1>Juracka Design Co.</h1></a>
-    <img src="jdc_logo.svg" alt="Juracka Design Co. Logo" style="height: 200px;">
+    <a href="#"><img src="jdc_logo.svg" alt="Juracka Design Co. Logo"></a>
   </div>
 
-  <!-- Navigation -->
+  <header>
+    <a href="index.html"><h1>Juracka Design Co.</h1></a>
+  </header>
+
   <nav>
     <div class="nav-column">
-      <a href="#">City Stuff</a>
-      <a href="#">At Home With Me</a>
-      <a href="#">Good Junk</a>
+      <a href="https://wildmile.org/" target="_blank">Support Wild Mile</a>
     </div>
     <div class="nav-column">
-      <a href="#">Threads + Fits</a>
-      <a href="#">Consumed & Loved</a>
-      <a href="https://wildmile.org/" target="_blank">Wild River Biz</a>
-    </div>
-    <div class="nav-column">
-      <a href="#">Money + Meaning</a>
-      <a href="#">Brain Dump</a>
+      <a href="https://jurackadesignco.substack.com" target="_blank">Brain Dump</a>
       <a href="mailto:jurackadesignco@gmail.com">Holler At Me</a>
     </div>
   </nav>
 
-  <!-- Footer -->
   <footer>
-    &copy; 2025 Juracka Design Co. | <a href="index.html">Back to Homepage</a>
+    &copy; 2025 Juracka Design Co.
   </footer>
-
 </body>
 </html>
