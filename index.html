@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Juracka Design Co.</title>
-  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
   <link href="https://fonts.googleapis.com/css2?family=Futura&display=swap" rel="stylesheet">
   <style>
     body {
@@ -106,3 +106,61 @@
     .contact-section p, .contact-section a {
       font-size: 1rem;
       line-height: 1.6;
+      text-align: left;
+      display: block;
+    }
+    footer {
+      text-align: left;
+      padding: 2rem 2rem;
+      font-size: 0.9rem;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <div class="top-bar">
+    <a href="#search">Search</a>
+    <a href="#donate" class="donate">Support</a>
+  </div>
+
+  <div style="display: flex; justify-content: flex-end; background-color: #1a1a1a; padding: 0 2rem;">
+    <a href="#"><img src="jdc_logo.svg" alt="Juracka Design Co. Logo" style="height: 200px;"></a>
+  </div>
+
+  <header>
+    <h1>Juracka Design Co.</h1>
+  </header>
+
+  <!-- Dynamic nav -->
+  <div id="nav-placeholder"></div>
+
+  <!-- Main content -->
+  <section class="affiliates">
+    <div class="affiliate-card">
+      <a href="https://www.wildmile.org" target="_blank">
+        <img src="beaver.jpg" alt="Beaver near the Wild Mile">
+      </a>
+      <div style="color: #ff2400; font-weight: bold; text-align: left; margin-top: 0.5rem;">Visit and Donate to Wild Mile</div>
+    </div>
+  </section>
+
+  <!-- Contact, CTA, Footer -->
+  <div id="contact-placeholder"></div>
+  <div id="cta-placeholder"></div>
+  <div id="footer-placeholder"></div>
+
+  <!-- JS to load components -->
+  <script>
+    async function loadComponent(id, file) {
+      const res = await fetch(file);
+      const html = await res.text();
+      document.getElementById(id).innerHTML = html;
+    }
+
+    loadComponent('nav-placeholder', 'components/nav.html');
+    loadComponent('contact-placeholder', 'components/contact.html');
+    loadComponent('cta-placeholder', 'components/cta.html');
+    loadComponent('footer-placeholder', 'components/footer.html');
+  </script>
+</body>
+</html>
