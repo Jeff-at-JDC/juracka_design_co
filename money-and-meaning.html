@@ -3,59 +3,108 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Money + Meaning | Juracka Design Co.</title>
+  <title>Money + Meaning – Juracka Design Co.</title>
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
   <link href="https://fonts.googleapis.com/css2?family=Futura&display=swap" rel="stylesheet">
+  <meta name="description" content="Money + Meaning: A fresh take on finance from a dude who actually gets it.">
+  <meta property="og:title" content="Money + Meaning – Juracka Design Co.">
+  <meta property="og:description" content="A fresh take on finance from a dude who actually gets it.">
+  <meta property="og:image" content="/jdc_logo.svg">
+  <meta name="theme-color" content="#1a1a1a">
   <style>
     body {
       margin: 0;
-      padding: 2rem;
+      padding: 0;
       font-family: 'Futura', sans-serif;
       background-color: #1a1a1a;
       color: #ffffff;
+      text-align: left;
     }
-    h1 {
-      color: #ff2400;
-      font-size: 2.5rem;
+    .top-bar {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      background-color: #1a1a1a;
+      padding: 0.5rem 2rem;
+      border-bottom: 1px solid #444;
+      font-size: 0.9rem;
     }
-    ul {
-      list-style: none;
-      padding-left: 0;
-    }
-    li {
-      margin: 1.5rem 0;
-    }
-    a {
+    .top-bar a {
       color: #ffffff;
       text-decoration: none;
-      font-size: 1.2rem;
+      margin-left: 1.5rem;
+    }
+    .top-bar a.donate {
+      color: #ff2400;
       font-weight: bold;
     }
-    a:hover {
-      text-decoration: underline;
+    header {
+      background-color: #1a1a1a;
+      text-align: left;
+      padding: 2rem 2rem 1rem 2rem;
     }
-    .timestamp {
-      font-size: 0.9rem;
-      color: #aaa;
-      margin-top: 0.2rem;
+    header h1 {
+      font-size: 3rem;
+      letter-spacing: 2px;
+      margin: 0;
+    }
+    .post-content {
+      padding: 2rem;
+      max-width: 800px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+      line-height: 1.7;
     }
     footer {
-      margin-top: 4rem;
+      text-align: left;
+      padding: 2rem 2rem;
       font-size: 0.9rem;
       color: #777;
-      text-align: left;
     }
   </style>
 </head>
 <body>
-  <h1>Money + Meaning</h1>
-  <ul>
-    <li>
-      <a href="what-tariffs-mean.html">What Tariffs Mean for Regular People (and What You Can Do About It)</a>
-      <div class="timestamp">4/5/2025, 9:10pm, Beverly, Chicago</div>
-    </li>
-  </ul>
-  <footer>
-    &copy; 2025 Juracka Design Co. | <a href="index.html" style="color:#ff2400;">Back to Homepage</a>
-  </footer>
+  <div class="top-bar">
+    <a href="#search">Search</a>
+    <a href="#donate" class="donate">Support</a>
+  </div>
+
+  <div style="display: flex; justify-content: flex-end; background-color: #1a1a1a; padding: 0 2rem;">
+    <a href="/"><img src="jdc_logo.svg" alt="Juracka Design Co. Logo" style="height: 200px;"></a>
+  </div>
+
+  <header>
+    <h1>Money + Meaning</h1>
+  </header>
+
+  <!-- Dynamic nav -->
+  <div id="nav-placeholder"></div>
+
+  <!-- Page content -->
+  <div class="post-content">
+    <p>Here’s where I break down what’s actually going on with tariffs, inflation, and everything the talking heads are making noise about — but in a way you can actually use.</p>
+
+    <p>Expect straight talk. Some sarcasm. No panic. This isn’t CNBC — it’s Common Sense Finance for people who hate finance bros.</p>
+
+    <p>[Insert your full blog post here]</p>
+  </div>
+
+  <!-- Contact, CTA, Footer -->
+  <div id="contact-placeholder"></div>
+  <div id="cta-placeholder"></div>
+  <div id="footer-placeholder"></div>
+
+  <script>
+    async function loadComponent(id, file) {
+      const res = await fetch(file);
+      const html = await res.text();
+      document.getElementById(id).innerHTML = html;
+    }
+
+    loadComponent('nav-placeholder', '/components/nav.html');
+    loadComponent('contact-placeholder', '/components/contact.html');
+    loadComponent('cta-placeholder', '/components/cta.html');
+    loadComponent('footer-placeholder', '/components/footer.html');
+  </script>
 </body>
 </html>
