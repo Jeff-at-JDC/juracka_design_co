@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Money + Meaning – Juracka Design Co.</title>
+  <title>Money + Meaning | Juracka Design Co.</title>
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <link href="https://fonts.googleapis.com/css2?family=Futura&display=swap" rel="stylesheet">
   <style>
@@ -13,24 +13,31 @@
       font-family: 'Futura', sans-serif;
       background-color: #1a1a1a;
       color: #ffffff;
-      line-height: 1.6;
     }
-    h1, h2, h3 {
+    h1 {
       color: #ff2400;
-      font-weight: bold;
+      font-size: 2.5rem;
+    }
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    li {
+      margin: 1.5rem 0;
     }
     a {
       color: #ff2400;
       text-decoration: none;
+      font-size: 1.2rem;
+      font-weight: bold;
     }
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
+    a:hover {
+      text-decoration: underline;
     }
     .timestamp {
       font-size: 0.9rem;
-      color: #999;
-      margin-bottom: 2rem;
+      color: #aaa;
+      margin-top: 0.2rem;
     }
     footer {
       margin-top: 4rem;
@@ -53,30 +60,24 @@
     <a href="index.html"><img src="jdc_logo.svg" alt="Juracka Design Co. Logo" style="height: 200px;"></a>
   </div>
 
-  <!-- Header + Blog Preview -->
-  <header class="container">
-    <h1>Money + Meaning</h1>
-    <div class="timestamp">Last updated April 5, 2025</div>
-
-    <div style="margin-top: 2rem;">
-      <h2>Latest Post</h2>
-      <h3 style="margin: 0;">
-        <a href="what-tariffs-mean.html">What Tariffs Mean for Regular People</a>
-      </h3>
-      <p style="color:#ccc; font-size: 0.95rem;">
-        A quick and calm breakdown of how new tariffs hit your wallet — and what you can actually do about it.
-      </p>
-      <a href="what-tariffs-mean.html" style="font-weight: bold;">→ Read the full post</a>
-    </div>
-  </header>
-
-  <!-- Dynamic components -->
+  <!-- Nav placeholder -->
   <div id="nav-placeholder"></div>
+
+  <!-- Main content -->
+  <h1>Money + Meaning</h1>
+  <ul>
+    <li>
+      <a href="what-tariffs-mean.html">What Tariffs Mean for Regular People (and What You Can Do About It)</a>
+      <div class="timestamp">4/5/2025, 9:10pm, Beverly, Chicago</div>
+    </li>
+  </ul>
+
+  <!-- Dynamic sections -->
   <div id="contact-placeholder"></div>
   <div id="cta-placeholder"></div>
   <div id="footer-placeholder"></div>
 
-  <!-- JS loader -->
+  <!-- Component loader -->
   <script>
     async function loadComponent(id, file) {
       try {
@@ -94,6 +95,5 @@
     loadComponent('cta-placeholder', 'components/cta.html');
     loadComponent('footer-placeholder', 'components/footer.html');
   </script>
-
 </body>
 </html>
