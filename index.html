@@ -43,10 +43,6 @@
       letter-spacing: 2px;
       margin: 0;
     }
-    header h1:hover {
-      color: #ff2400;
-      transition: color 0.2s ease;
-    }
     nav {
       display: flex;
       flex-wrap: wrap;
@@ -123,10 +119,10 @@
 </head>
 <body>
 
-  <!-- Load universal header -->
+  <!-- Dynamic header -->
   <div id="header-placeholder"></div>
 
-  <!-- Load nav -->
+  <!-- Dynamic nav -->
   <div id="nav-placeholder"></div>
 
   <!-- Main content -->
@@ -144,7 +140,7 @@
   <div id="cta-placeholder"></div>
   <div id="footer-placeholder"></div>
 
-  <!-- JS to load components -->
+  <!-- Component loader -->
   <script>
     async function loadComponent(id, file) {
       const res = await fetch(file);
