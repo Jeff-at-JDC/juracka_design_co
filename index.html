@@ -43,6 +43,10 @@
       letter-spacing: 2px;
       margin: 0;
     }
+    header h1:hover {
+      color: #ff2400;
+      transition: color 0.2s ease;
+    }
     nav {
       display: flex;
       flex-wrap: wrap;
@@ -118,20 +122,11 @@
   </style>
 </head>
 <body>
-  <div class="top-bar">
-    <a href="#search">Search</a>
-    <a href="#donate" class="donate">Support</a>
-  </div>
 
-  <div style="display: flex; justify-content: flex-end; background-color: #1a1a1a; padding: 0 2rem;">
-    <a href="#"><img src="jdc_logo.svg" alt="Juracka Design Co. Logo" style="height: 200px;"></a>
-  </div>
+  <!-- Load universal header -->
+  <div id="header-placeholder"></div>
 
-  <header>
-    <h1>Juracka Design Co.</h1>
-  </header>
-
-  <!-- Dynamic nav -->
+  <!-- Load nav -->
   <div id="nav-placeholder"></div>
 
   <!-- Main content -->
@@ -157,6 +152,7 @@
       document.getElementById(id).innerHTML = html;
     }
 
+    loadComponent('header-placeholder', 'components/header.html');
     loadComponent('nav-placeholder', 'components/nav.html');
     loadComponent('contact-placeholder', 'components/contact.html');
     loadComponent('cta-placeholder', 'components/cta.html');
