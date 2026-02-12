@@ -1,47 +1,35 @@
 # Juracka Design Co. Website
 
-This site is a plain static website (`index.html` + assets), so you can host it **for free**.
+This is a static website and can be launched for free with GitHub Pages.
 
-## Launch for free with GitHub Pages (recommended)
+## One-click-ish launch
 
-### 1) Push this repo to GitHub
+1. Push this repo to GitHub.
+2. Click this button in your GitHub repo: **Actions → “Deploy static site to GitHub Pages” → Run workflow**.
+3. Open your live site at:
+
+`https://<your-username>.github.io/<repo-name>/`
+
+> You do **not** need to buy a domain.
+
+## First-time setup (once)
+
+In your repo on GitHub:
+- Go to **Settings → Pages**
+- Set **Source** to **GitHub Actions**
+
+## Push commands
+
 ```bash
-git remote add origin https://github.com/<your-username>/juracka_design_co.git
+git remote add origin https://github.com/<your-username>/<repo-name>.git
 git branch -M main
 git push -u origin main
 ```
 
-### 2) Turn on GitHub Pages
-1. Open your repo on GitHub.
-2. Go to **Settings → Pages**.
-3. Under **Build and deployment**, set:
-   - **Source:** `Deploy from a branch`
-   - **Branch:** `main`
-   - **Folder:** `/ (root)`
-4. Save.
-
-### 3) Your free URL
-Your site will publish at:
-
-`https://<your-username>.github.io/juracka_design_co/`
-
-No domain purchase required.
-
----
-
-## Important for free hosting
-- This repo now uses the default GitHub Pages URL setup.
-- If you later buy a custom domain, you can add a `CNAME` file back.
-
----
-
 ## Local preview
-Run locally before publishing:
 
 ```bash
 python3 -m http.server 4173
 ```
 
-Then open:
-
-`http://localhost:4173`
+Then open `http://localhost:4173`.
